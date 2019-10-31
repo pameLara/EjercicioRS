@@ -2,7 +2,7 @@
 title: "Mascotas"
 output: html_document
 ---
-```{r setup, include=FALSE}
+```{r setup, include=FALSE , echo=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
@@ -12,12 +12,16 @@ La clasificación de los nombres de mascotas más populares se puede evaluar, en
 
 Según algunas revistas, estos son los 10 nombres más comunes en España
 
-```{r tablaPerro, include=FALSE}
+```{r tablaPerro, include=FALSE , echo=FALSE}
 nombrePerros <- read.table("perros.csv", sep = ";", header = TRUE)
 ```
 
-```{r kablePerro , include=TRUE}
+```{r libreria, include=FALSE , echo=FALSE}
 library(knitr)
+```
+
+
+```{r kablePerro , include=TRUE, echo=FALSE}
 kable(nombrePerros)
 ```
 
@@ -30,12 +34,11 @@ kable(nombrePerros)
 
 En esta tabla vemos los 10 nombres populares de gatos en diferentes países:
 
-```{r tablaGato, include=FALSE}
+```{r tablaGato, include=FALSE , echo=FALSE}
 nombreGatos <- read.table("gatos.csv", sep = ";", header = TRUE)
 ```
 
-```{r kableGato , include=TRUE}
-library(knitr)
+```{r kableGato , include=TRUE , echo=FALSE}
 kable(nombreGatos)
 ```
 
