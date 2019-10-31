@@ -6,22 +6,45 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+## Nombres Populares de Perros
+
+Según algunas revistas, estos son los 10 nombres más comunes en España
+
+```{r tablaPerro, include=FALSE}
+nombrePerros <- read.table("perros.csv", sep = ";", header = TRUE)
+```
+
+```{r kablePerro , include=TRUE}
+library(knitr)
+kable(nombrePerros)
+```
+
+> *"Si  los perros van al cielo, cuando muera quiero ir donde ellos van."*
+
+![](perrito_bandera.jpg) 
+
+
 ## Nombres Populares de Gatos
 
 La popularidad de los nombres de gatos difiere según la nación, incluso las naciones con el mismo idioma. La clasificación de los nombres de gatos más populares se puede evaluar, en particular, a partir de registros de seguros de mascotas, registros de microchips y registros de raza.
 
 En esta tabla vemos los 10 nombres populares de gatos en diferentes países:
 
-```{r tabla, include=FALSE}
+```{r tablaGato, include=FALSE}
 nombreGatos <- read.table("gatos.csv", sep = ";", header = TRUE)
 ```
 
-```{r kable , include=TRUE}
+```{r kableGato , include=TRUE}
 library(knitr)
 kable(nombreGatos)
 ```
 
+> *"El paraíso jamás será paraíso, a no ser que mis gatos estén allí, esperándome..."*
+
 ![](gatito_mundo.jpg) 
+
+
+
 
 
 # ana
